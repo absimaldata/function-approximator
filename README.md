@@ -1,8 +1,8 @@
 # 3 dimensional polynomial function Approximator using Deep leaning methods.
 
-Model Architechture
+Model Architechture:
 
-is 2 (x and y inputs)
+2 (x and y inputs)
 4 hidden layers consisting of only 10 neurons each.
 and 1 output (z value)
 
