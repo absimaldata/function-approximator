@@ -10,12 +10,9 @@ from keras.utils.generic_utils import get_custom_objects
 from keras import Model
 import keras.backend as K
 import tensorflow as tf
-
 import math
-
 import numpy as np
 import random
-from matplotlib import pyplot
 
 x = np.array([[1.0, 1.0]])
 logx = np.array([[0.0, 0.0]])
@@ -32,21 +29,14 @@ for i in range(10000):
 opt = Adam(learning_rate=0.01, clipnorm=1)
 initializer = tf.keras.initializers.GlorotUniform()
 
-get_custom_objects().update({'logfunc': Activation(logfunc)})
-drop_out = 0.2
-
 logInput = keras.Input(shape=(2,), name="logInput")
 
 logDense = Dense(10, kernel_initializer=initializer, activation='linear')(logInput)
 logDense = Dense(10, kernel_initializer=initializer, activation='linear')(logDense)
 logDense = Dense(10, kernel_initializer=initializer, activation='exponential')(logDense)
-
-
 finalDense = Dense(10, kernel_initializer=initializer, activation='linear')(logDense)
 finalDense = Dense(10, kernel_initializer=initializer, activation='linear')(logDense)
 finalDense = Dense(1, kernel_initializer=initializer, activation='linear')(finalDense)
-
-
 model = Model(inputs=[logInput], outputs=[finalDense])
 
 model.summary()
