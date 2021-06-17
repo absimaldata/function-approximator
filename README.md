@@ -2,7 +2,7 @@
 
 Model Architechture:
 
-2 (x and y inputs)
+n input layer (currently tested on X and Y inputs)
 4 hidden layers consisting of only 10 neurons each.
 and 1 output (z value)
 
