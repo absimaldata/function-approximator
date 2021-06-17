@@ -1,4 +1,4 @@
-# 3 dimensional polynomial function Approximator using Deep leaning methods.
+# n-dimensional Polynomial function Approximator using Deep leaning methods.
 
 Model Architechture:
 
